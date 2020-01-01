@@ -83,7 +83,7 @@ variable "network_bridge" {
 }
 
 variable "target_node" {
-  type = string
+  type        = string
   description = "The node to deploy virtual machines to."
 }
 
