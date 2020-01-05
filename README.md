@@ -35,6 +35,7 @@ Usage Example:
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | datastore | The Storage Pool to deploy the virtual machines to. | string | - | yes |
+| disk_format | The virtual disk format. raw, qcow2, vmdk | string | `raw` | no |
 | disk_size | The amount of disk space to assign to each VM. | string | `40` | no |
 | dns_server | The DNS server to assign to each virtual machine. | string | - | no |
 | domain_name | The domain of the virtual machine. This is added as the domain name on Linux, and to the DNS domain search list on both Linux and Windows. | string | `example.com` | no |

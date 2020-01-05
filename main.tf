@@ -37,7 +37,7 @@ resource "proxmox_vm_qemu" "virtual_machine" {
     size         = var.disk_size
     type         = "scsi"
     storage      = var.datastore
-    storage_type = "raw"
+    storage_type = var.disk_format
     iothread     = false
   }
 
@@ -50,7 +50,7 @@ resource "proxmox_vm_qemu" "virtual_machine" {
 
   # Setup the ip address using cloud-init.
   # Keep in mind to use the CIDR notation for the ip.
-  ipconfig0    = "ip=dhcp,ip6=dhcp"
+  ipconfig0    = "ip=dhcp"
   nameserver   = var.dns_server
   searchdomain = var.domain_name
   sshkeys      = file(var.ssh_public_key)

@@ -58,6 +58,12 @@ variable "qemu_agent" {
   default     = 0
 }
 
+variable "disk_format" {
+  type        = string
+  description = "The virtual disk format. raw, qcow2, and vmdk"
+  default     = "raw"
+}
+
 variable "disk_size" {
   type        = number
   description = "The main disk size in GB"
