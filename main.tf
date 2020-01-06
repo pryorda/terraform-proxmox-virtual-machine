@@ -36,8 +36,9 @@ resource "proxmox_vm_qemu" "virtual_machine" {
     id           = 0
     size         = var.disk_size
     type         = "scsi"
+    format       = var.disk_format
     storage      = var.datastore
-    storage_type = var.disk_format
+    storage_type = "raw"
     iothread     = false
   }
 
